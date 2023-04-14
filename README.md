@@ -1,13 +1,13 @@
-# Practical Protection of Voice-Controllable Devices Against Self-Issued Voice Commands
+# Protecting Voice-Controllable Devices Against Self-Issued Voice Commands
 
-This is the anonymous Github that supports the research paper _"Practical Protection of Voice-Controllable Devices Against Self-Issued Voice Commands"_. This repository is kept anonymous for the double-blind review process.
+This repository supports the research paper _"Protecting Voice-Controllable Devices Against Self-Issued Voice Commands"_.
 
-Voice spoofing attacks against smart devices issue a voice command using a synthesized voice from a speaker near the target device. An adversary may also leverage the target device to issue a voice command to itself, performing a self-issued voice command. In this paper, we propose a practical countermeasure against this attack, by training a Siamese Neural Network to recognize the differences between what is being played and what is being recorded by the voice-controllable device, as these audios are similar in case of voice command self-issue attacks and different in case of legitimate commands. Hence, our solution protects voice-controllable devices from self-issued commands while allowing usage of such devices to people who require a synthesized voice to communicate. We find that our solution correctly classifies commands in the benign and malign categories 97% of the times on average.
+Voice spoofing attacks against smart devices issue a voice command using a synthesized voice from a speaker near the target device. An adversary may also leverage the target device to issue a voice command to itself, performing a self-issued voice command. In this paper, we propose a countermeasure against this attack, by training a Twin Neural Network to recognize the differences between what is being played and what is being recorded by the voice-controllable device, as these audios are similar in case of voice command self-issue attacks and different in case of legitimate commands. Hence, our solution protects voice-controllable devices from self-issued commands while allowing usage of such devices to people who require a synthesized voice to communicate. We find that our solution correctly classifies commands in the benign and malign categories 97% of the times on average.
 
 ## Contents of this release
 
 ### Source Code
-- `Release-SI-Mitigation.ipynb`, a notebook that contains the full source code of our solution. It performs the training of our Siamese Neural Network and then it validates such network against a different testing dataset. Instructions for use can be found within the notebook itself, which is best run on Google Colab.
+- `Release-SI-Mitigation.ipynb`, a notebook that contains the full source code of our solution. It performs the training of our Twin Neural Network and then it validates such network against a different testing dataset. Instructions for use can be found within the notebook itself, which is best run on Google Colab.
 - `Release-SI-MonoValidation.ipynb`, a notebook that contains only the portion of code that performs the validation. It can be used (i) for benchmarking purposes or (ii) to test a pretrained model quickly against a new sample. Instructions for use can be found within the notebook itself, which can be run on Google Colab, but can also be used as a Python script (just copy and paste the code within a `.py` file) on Windows and Raspbian. 
 
 ### Datasets
